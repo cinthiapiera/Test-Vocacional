@@ -1,19 +1,64 @@
-★
-Misión 1 · Nivel 1
-Test Vocacional
-Descubre tus habilidades
-Responde las siguientes 8 preguntas pensando en cómo trabajaste realmente durante el proyecto de tu app — no en cómo te gustaría ser. Al final vas a descubrir tu habilidad más destacada.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Vocacional — Misión 1</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <div class="corner"></div>
 
-COMENZAR
-★
-Test Vocacional
-Pregunta 1
-Pregunta 1 de 8
-★
-Test Vocacional
-¡Este es tu resultado!
-💡
-Pensamiento creativo
-Anota tu resultado: guárdalo en tu cuaderno o bitácora — lo vas a usar en el Nivel 2 para relacionarlo con una tarea del proyecto y crear tu tarjeta en el Portafolio.
-VOLVER A REALIZARLO
-Test Vocacional — Misión 1
+  <!-- INTRO -->
+  <div class="screen active" id="screen-intro">
+    <div class="header">
+      <div class="star">★</div>
+      <div class="lines"><div class="l1">Misión 1 · Nivel 1</div><div class="l2">Test Vocacional</div></div>
+    </div>
+    <div class="intro">
+      <h2>Descubre tus habilidades</h2>
+      <p>Responde las siguientes 8 preguntas pensando en cómo trabajaste realmente durante el proyecto de tu app — no en cómo te gustaría ser. Al final vas a descubrir tu habilidad más destacada.</p>
+      <button class="btn" onclick="startQuiz()">COMENZAR</button>
+    </div>
+  </div>
+
+  <!-- PREGUNTA (plantilla dinámica) -->
+  <div class="screen" id="screen-question">
+    <div class="header">
+      <div class="star">★</div>
+      <div class="lines"><div class="l1">Test Vocacional</div><div class="l2" id="q-label">Pregunta 1</div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label" id="progress-label">Pregunta 1 de 8</div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:12.5%"></div></div>
+    </div>
+    <div class="question" id="question-text"></div>
+    <div class="options" id="options-container"></div>
+  </div>
+
+  <!-- RESULTADO -->
+  <div class="screen" id="screen-result">
+    <div class="header">
+      <div class="star">★</div>
+      <div class="lines"><div class="l1">Test Vocacional</div><div class="l2">¡Este es tu resultado!</div></div>
+    </div>
+    <div class="result">
+      <div class="rcard">
+        <div class="ic" id="res-icon">💡</div>
+        <div class="name" id="res-name">Pensamiento creativo</div>
+        <div class="desc" id="res-desc"></div>
+      </div>
+      <div class="note">
+        <b>Anota tu resultado:</b> guárdalo en tu cuaderno o bitácora — lo vas a usar en el Nivel 2 para relacionarlo con una tarea del proyecto y crear tu tarjeta en el Portafolio.
+      </div>
+      <button class="btn ghost" onclick="startQuiz()">VOLVER A REALIZARLO</button>
+    </div>
+  </div>
+
+  <div class="footer-logo"><div class="dot"></div><span>Test Vocacional — Misión 1</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
